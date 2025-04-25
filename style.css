@@ -486,16 +486,9 @@ i:hover {
 
 @media (max-width: 768px) {
 
-    #cabecalho {
-        flex-direction: row;
-        align-items: center;
-        padding: 20px;
-
-    }
-
     #cabecalho a {
-        font-size: 1.1em;
-        padding: 10px;
+        font-size: 16px;
+        padding: 5px;
         text-align: center;
     }
 
@@ -510,18 +503,17 @@ i:hover {
         /* largura máxima da div */
         font-size: 1.2rem;
         /* tamanho da fonte padrão */
-        max-height: 400px;  
-  
+        max-height: 400px;
+
 
     }
 
-    .container-Musicas a{
+    .container-Musicas a {
         font-size: 1rem;
     }
 
     .container-Musicas:hover {
-        transform: scale(1.1);
-        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        transform: none;
     }
 
     #container-Albuns {
@@ -556,7 +548,8 @@ i:hover {
         margin: 20px;
     }
 
-    #container-sobre h1, #container-discografia h1 {
+    #container-sobre h1,
+    #container-discografia h1 {
         font-size: 1.5em;
     }
 
