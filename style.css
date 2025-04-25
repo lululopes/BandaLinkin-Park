@@ -499,13 +499,12 @@ i:hover {
     }
 
     .container-Musicas {
-        max-width: 340px;
+        max-width: 400px;
         /* largura máxima da div */
         font-size: 1.2rem;
         /* tamanho da fonte padrão */
-        max-height: 400px;
-
-
+        max-height: 80%;
+        padding: 15px;
     }
 
     .container-Musicas a {
