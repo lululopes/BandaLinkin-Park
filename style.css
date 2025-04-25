@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    /* remove todas as margens padrão dos elementos */
+    padding: 0;
+    /* remove todos os espaçamentos internos padrão dos elementos */
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* faz com que o site não tenha rolagem lateral (horizontal) */
+}
+
+body {
+    background-color: #181a20;
+    /* cor de fundo do site */
+    font-family: 'Roboto', sans-serif;
+    /* tipo da fonte que tem no site */
+}
+
+#cabecalho {
+    background-color: black;
+    /* cor de fundo do menu */
+    padding: 20px;
+    /* espaçamento deixando o menu maior */
+    text-align: center;
+    /* alinhando os links ao centro */
+}
+
+#cabecalho a {
+    text-decoration: none;
+    /* tirar a linha que fica embaixo do link */
+    padding: 8px 12px;
+    /* espaçamento entre os links */
+    font-size: 15px;
+    /* tamanho da fonte dos LINKS */
+    color: white;
+    /* cor da fonte dos links */
+    font-weight: bold;
+    /* LINKS em negrito */
+}
+
+#cabecalho a:hover {
+    color: #536878;
+    /* cor dos links quando passa o mouse por cima */
+    border-bottom: solid #536878;
+    /* linha cinza abaixo dos links ao passar o mouse */
+}
+
+#container-index h1 {
+    padding-left: 30px;
+    /* to achando esse h1 mt torto, mas joguei ele um pouco pra esquerda, apesar de achar q não adiantou mt*/
+    margin: 20%;
+    /* margem externa em todos os lados do h1 */
+    color: #c3c4e6;
+    /* cor do texto rosa */
+    font-weight: bold;
+    /* texto em negrito */
+    text-align: center;
+    /* centraliza o texto */
+    font-size: 1.8rem;
+    /* tamanho da fonte */
+}
+
+#container-Playlist h1,
+#container-Albuns h1,
+#container-titulo h1 {
+    color: white;
+    /* cor do texto branco */
+    font-weight: bold;
+    /* texto em negrito */
+    text-align: center;
+    /* centraliza o texto */
+    font-size: 1.5rem;
+    /* tamanho da fonte */
+    margin: 50px 0;
+    /* margem em cima e embaixo, 0 nas laterais */
+}
+
+/* seção de principais Músicas */
+
+.container-Musicas {
+    max-width: 500px;
+    /* largura máxima da div */
+    margin: auto;
+    /* centraliza a div na tela */
+    padding: 15px;
+    /* espaço interno da div */
+    align-items: center;
+    /* alinha os itens no centro verticalmente */
+    border-radius: 20px;
+    /* borda arredondada */
+    margin-bottom: 10px;
+    /* espaço abaixo de cada música */
+    display: flex;
+    /* usa flexbox para alinhar conteúdo */
+    justify-content: space-between;
+    /* separa os itens da div igualmente */
+    background-color: #232642;
+    /* fundo cinza */
+    color: white;
+    /* texto branco */
+    font-weight: 400;
+    /* fonte longe de ficar negrito */
+    max-height: 100%;
+    /* altura máxima */
+    font-size: 1rem;
+    /* tamanho da fonte padrão */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* adiciona transição suave no hover */
+}
+
+.container-Musicas:hover {
+    transform: scale(1.1);
+    /* aumenta o tamanho da div ao passar o mouse */
+}
+
+.container-Musicas a {
+    font-family: Arial, Helvetica, sans-serif;
+    /* tipo de fonte do botão/link */
+    text-decoration: none;
+    /* tira a linha de baixo */
+    color: white;
+    /* cor da fonte branca */
+    font-weight: bold;
+    /* fonte em negrito */
+    background-color: black;
+    /* fundo do botão preto */
+    border-radius: 50px;
+    /* botão arredondado */
+    padding: 10px 20px;
+    /* espaço interno do botão */
+    font-size: 0.9rem;
+    /* tamanho da fonte do botão */
+    box-shadow: 0 0 10px 3px white;
+    /* sombra branca ao redor do botão */
+}
+
+.container-Musicas a:hover {
+    transform: scale(1.1);
+    /* aumenta o botão ao passar o mouse */
+    box-shadow: 0 0 10px 3px black;
+    /* sombra preta ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* suaviza a transição ao passar o mouse */
+}
+
+/* seção de Álbuns */
+
+#container-Albuns {
+    display: flex;
+    /* flexbox */
+    justify-content: center;
+    /* centraliza o conteúdo */
+    gap: 30px;
+    /* espaço entre os álbuns */
+    text-align: center;
+    /* centraliza os textos */
+
+}
+
+.container-PrincipaisAlbuns {
+    border-radius: 20px;
+    /* bordas arredondadas */
+    background-color: #232630;
+    /* cor de fundo da div de álbum */
+    padding: 20px;
+    /* espaço interno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* adiciona transição suave no hover */
+}
+
+.container-PrincipaisAlbuns a {
+    text-decoration: none;
+    /* remove a linha dos links */
+    color: white;
+    /* cor branca */
+    font-family: Arial, Helvetica, sans-serif;
+    /* fonte usada */
+}
+
+.container-PrincipaisAlbuns a:hover {
+    color: #0f2cce;
+    /* muda a cor do link ao passar o mouse */
+}
+
+.container-PrincipaisAlbuns:hover {
+    transform: scale(1.1);
+    /* aumenta a div ao passar o mouse */
+    box-shadow: 0 0 6px 1px #cfcfce;
+    /* sombra branca ao redor da div */
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+    /* suaviza a transição */
+}
+
+.container-PrincipaisAlbuns img {
+    width: 200px;
+    /* largura da imagem */
+    height: 200px;
+    /* altura da imagem */
+    object-fit: cover;
+    /* ajusta a imagem para não distorcer */
+    border-radius: 15px;
+    /* bordas arredondadas na imagem */
+    overflow: hidden;
+    /* esconde o que passa dos limites */
+    padding-bottom: 10px;
+    /* espaço embaixo da imagem */
+}
+
+/* seção galeria de Fotos */
+#gallery-container {
+    margin: 40px;
+    /*  margem de 40px em todos os lados do container*/
+    display: flex;
+    /*flexível */
+    justify-content: center;
+    /*  as imagens da galeria no centro do container */
+    align-items: center;
+    /* alinhando ao centro da altura  */
+}
+
+.gallery {
+    display: flex;
+    /*flexível */
+    justify-content: center;
+    /* centraliza as imagens */
+    padding: 10px;
+    /* espaço entre as imagens */
+}
+
+.gallery img {
+    width: 200px;
+    /* largura da imagem */
+    height: 200px;
+    /* altura da imagem */
+    object-fit: cover;
+    /* a imagem não fica distorcida */
+    border-radius: 15px;
+    /* bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* animação suave ao passar o mouse */
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    /* aumenta um pouco a imagem ao passar o mouse */
+}
+
+#filtro-cinza {
+    filter: grayscale(100%);
+    /* aplica filtro preto e branco na imagem */
+}
+
+#filtro-sepsia {
+    filter: sepia(100%);
+    /* aplica filtro sépia (tom envelhecido) */
+}
+
+#filtro-brilho {
+    filter: brightness(1.0);
+    /* brilho normal */
+}
+
+#filtro-contraste {
+    filter: contrast(1.5);
+    /* brilho um pouco mais forte */
+}
+
+/* Seção Formulário */
+
+#container-Formulario {
+    display: flex;
+    /* flexível */
+    justify-content: center;
+    /* centraliza o formulário */
+    margin: 60px;
+    /* espaço externo da seção */
+}
+
+form h1 {
+    color: white;
+    /* cor do texto */
+    font-size: 1.4rem;
+    /* tamanho do título */
+    text-align: center;
+    /* centraliza o título */
+    margin-bottom: 20px;
+    /* espaço abaixo do título */
+}
+
+form {
+    background-color: black;
+    /* fundo do form */
+    padding: 50px;
+    /* espaço interno */
+    align-items: center;
+    /* centraliza os itens */
+    width: 100%;
+    /* largura total */
+    max-width: 300px;
+    /* largura máxima do formulário */
+    display: flex;
+    /* usa flexbox */
+    flex-direction: column;
+    /* organiza os elementos na vertical */
+    gap: 10px;
+    /* espaço entre os campos */
+}
+
+input,
+textarea {
+    width: 100%;
+    /* largura total */
+    padding: 10px;
+    /* espaço interno */
+    background-color: black;
+    /* fundo preto */
+    color: white;
+    /* texto branco */
+    align-items: center;
+    /* alinha ao centro */
+    font-size: 1rem;
+    /* tamanho do texto */
+    margin-bottom: 15px;
+    /* espaço abaixo  */
+    border-radius: 10px;
+    /* bordas arredondadas */
+    font-family: 'Roboto', sans-serif;
+    /* fonte dos campos */
+}
+
+.btn-enviar {
+    background-color: #536878;
+    /* cor de fundo do botão */
+    color: white;
+    /* cor do texto do botão */
+    padding: 10px 20px;
+    /* espaço interno do botão */
+    border: none;
+    /* sem borda */
+    border-radius: 20px;
+    /* borda arredondada */
+    font-size: 1rem;
+    /* tamanho do texto */
+    font-weight: bold;
+    /* texto em negrito */
+    transition: 0.3s;
+    /* animação suave */
+    display: flex;
+    /* flexível */
+    align-items: center;
+    /* alinha o conteúdo na vertical */
+    justify-content: center;
+    /* centraliza o conteúdo */
+    cursor: pointer;
+    /* muda o cursor para a mãozinha */
+}
+
+.btn-enviar:hover {
+    background-color: #3b4757;
+    /* muda a cor do botão ao passar o mouse */
+}
+
+footer {
+    position: relative;
+    /* posicionamento relativo */
+    bottom: 0;
+    /* alinhado ao final da página */
+    left: 0;
+    /* encostado à esquerda */
+    width: 100%;
+    /* largura total */
+    z-index: 5;
+    /* camada acima dos outros */
+    background-color: black;
+    /* fundo preto */
+    color: #fff;
+    /* texto branco */
+    padding: 15px;
+    /* espaço interno */
+    text-align: center;
+    /* centraliza o texto */
+}
+
+.footer-info {
+    text-align: center;
+    /* centraliza o conteúdo */
+    font-size: 0.8rem;
+    /* tamanho da fonte menor */
+    margin-bottom: 10px;
+    /* espaço abaixo do parágrafo */
+}
+
+.footer-Redesocial a {
+    color: #536878;
+    /* cor cinza dos ícones/links */
+    font-size: 1rem;
+    /* tamanho da fonte */
+    padding: 5px;
+    /* espaço ao redor do link */
+    text-decoration: none;
+    /* tira a linha de baixo */
+}
+
+.footer-Redesocial a:hover {
+    color: #3b4757;
+    /* muda a cor ao passar o mouse */
+}
+
+i {
+    transition: 0.3s ease;
+    /* animação para hover */
+}
+
+i:hover {
+    transform: scale(1.2);
+    /* aumenta o ícone ao passar o mouse */
+}
+
+/* PÁGINA SOBRE */
+
+#container-sobre h1 {
+    color: white;
+    /* cor do texto */
+    font-weight: bold;
+    /* texto em negrito */
+    text-align: center;
+    /* centraliza o título */
+    font-size: 1.6rem;
+    /* tamanho da fonte */
+    margin: 50px 0 20px;
+    /* margem superior, lateral 0 e inferior 20px */
+    font-family: 'Segoe UI', sans-serif;
+    /* fonte do título */
+}
+
+#container-paragrafo {
+    color: white;
+    /* cor do texto */
+    max-width: 800px;
+    /* largura máxima */
+    margin: 0 auto;
+    /* centraliza o conteúdo */
+    text-align: center;
+    /* centraliza os parágrafos */
+    font-size: 1rem;
+    /* tamanho do texto */
+    line-height: 2;
+    /* altura da linha para melhor leitura */
+    padding: 40px;
+    /* espaço interno */
+    font-family: 'Inter', sans-serif;
+    /* fonte do parágrafo */
+}
+
+#container-paragrafo p {
+    margin-bottom: 25px;
+    /* espaço entre os parágrafos */
+}
+
+.gallery2:hover {
+    transform: translateY(-5px);
+    /* deslocamento visual para cima */
+    box-shadow: 0 0 10px white;
+    /* sombreamento branco ao passar o mouse */
+}
+
+.gallery2 img {
+    width: 200px;
+    /* largura da imagem */
+    height: 200px;
+    /* altura da imagem */
+    object-fit: cover;
+    /* ajusta a imagem para preencher a caixa sem distorcer */
+    border-radius: 15px;
+    /* bordas arredondadas na imagem */
+    overflow: hidden;
+    /* esconde partes da imagem que ultrapassam os limites da caixa */
+    padding-bottom: 10px;
+    /* espaço abaixo da imagem para separar de outros elementos */
+}
+
+
+/* responsividade  do cabeçalho */
+
+@media (max-width: 768px) {
+
+    #cabecalho {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+
+    }
+
+    #cabecalho a {
+        font-size: 1.1em;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #container-Playlist h1,
+    #container-Albuns h1,
+    #container-titulo h1 {
+        font-size: 1.5srem;
+    }
+
+    .container-Musicas {
+        max-width: 340px;
+        /* largura máxima da div */
+        font-size: 1.2rem;
+        /* tamanho da fonte padrão */
+        max-height: 400px;  
+  
+
+    }
+
+    .container-Musicas a{
+        font-size: 1rem;
+    }
+
+    .container-Musicas:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    #container-Albuns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #gallery-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #container-Formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #container-index h1 {
+        font-size: 30px;
+        padding: 50px;
+        margin: 20px;
+    }
+
+    #container-sobre h1, #container-discografia h1 {
+        font-size: 1.5em;
+    }
+
+    #container-paragrafo {
+        font-size: 1.2rem;
+        line-height: 20px;
+    }
+}
