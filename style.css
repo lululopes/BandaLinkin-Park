@@ -542,9 +542,12 @@ i:hover {
     }
 
     #container-index h1 {
-        font-size: 30px;
-        padding: 50px;
-        margin: 20px;
+        height: 80vh;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
     }
 
     #container-sobre h1,
